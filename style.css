@@ -1,0 +1,208 @@
+/* Variáveis de Tema */
+:root {
+    --bg-color: #fafafa;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --link-color: #0056b3;
+    --link-hover: #003d82;
+    --border-color: #e5e5e5;
+    --card-bg: #ffffff;
+    --card-hover: #f1f1f1;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --link-color: #66b2ff;
+    --link-hover: #99ccff;
+    --border-color: #333333;
+    --card-bg: #1e1e1e;
+    --card-hover: #2a2a2a;
+}
+
+/* Reset e Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Navbar e Botão de Tema */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--card-hover);
+}
+
+/* Cabeçalho */
+.header {
+    margin-bottom: 4rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Seções */
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards (Experiência e Projetos) */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.card-company {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.card ul {
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.action-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Grid de Ferramentas */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: background-color 0.2s ease;
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.skill-item:hover {
+    background-color: var(--card-hover);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
