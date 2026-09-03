@@ -21,8 +21,8 @@ toggleButton.addEventListener("click", () => {
 function updateIcon(theme) {
   const iconSpan = toggleButton.querySelector(".icon");
   if (theme === "dark") {
-    iconSpan.textContent = "☀️"; // Sol para voltar ao modo claro
+    iconSpan.textContent = "0"; // 0 para escuro
   } else {
-    iconSpan.textContent = "🌙"; // Lua para ir pro modo escuro
+    iconSpan.textContent = "1"; // I para claro
   }
 }
